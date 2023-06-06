@@ -6,6 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding: 15px;
   &__bar-item {
     list-style-type: none;
     outline: none;
@@ -52,5 +53,27 @@
     display: block;
     text-decoration: none;
     list-style-type: none;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .navigation {
+    padding: 0 15px;
+  }
+  .navigation__bar {
+    display: flex;
+  }
+  .navigation__bar-item:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .navigation {
+    padding: 0 15px;
+  }
+  .navigation__bar {
+    display: flex;
+  }
+  .navigation__bar-item:not(:last-child) {
+    margin-right: 60px;
   }
 }

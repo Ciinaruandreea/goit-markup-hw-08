@@ -66,10 +66,38 @@
             </li>
           </ul>
         </div>
+        <button class="burger" type="button" data-menu-open>
+          <svg class="burger__icon" width="24" height="16">
+            <use href="./images/icons.svg.svg#burger"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
       <section class="main section">
+        <picture>
+          <source
+            srcset="
+              images/cover/header-mobil.png,
+              images/cover/header-mobil@2x.jpg 2x
+            "
+          />
+          <source
+            media="(min-width:768px)"
+            srcset="
+              images/cover/header-tablet.png,
+              images/cover/header-tablet@2x.jpg 2x
+            "
+          />
+          <source
+            media="(min-width:1200px)"
+            srcset="
+              images/cover/header-desktop.png,
+              images/cover/header-desktop@2x.jpg 2x
+            "
+          />
+        </picture>
+
         <div class="container main__container">
           <h1 class="main__title">
             EFFECTIVE SOLUTIONS FOR <br />

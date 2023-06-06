@@ -1,9 +1,11 @@
 .portfolio {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   justify-content: center;
   margin-top: 94px;
   list-style-type: none;
+  flex-wrap: wrap;
+  row-gap: 15px;
 
   &__list-button {
     font-family: "Roboto";
@@ -26,6 +28,9 @@
     cursor: pointer;
     color: #ffffff;
   }
+}
+.portfolio__list:not(:last-child) {
+  margin-right: 8px;
 }
 .port {
   display: flex;
@@ -119,5 +124,17 @@
     letter-spacing: 0.03em;
     color: #757575;
     margin-top: 4px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin-bottom: 50px;
   }
 }

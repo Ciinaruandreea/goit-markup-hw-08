@@ -1,22 +1,6 @@
 .contacts {
-  display: flex;
+  display: none;
   list-style-type: none;
-
-  &__mail-tel {
-    display: flex;
-    font-family: "Roboto";
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 16px;
-    letter-spacing: 0.02em;
-    padding: 32px 31px;
-    color: #757575;
-    text-decoration: none;
-  }
-  &__mail-tel:hover,
-  &__mail-tel:focus {
-    color: #2196f3;
-  }
 }
 .contacts__icon {
   margin-right: 10px;
@@ -26,5 +10,45 @@
   &:hover,
   &:focus {
     fill: #2196f3;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .contacts {
+    display: flex;
+    flex-direction: column;
+  }
+  .contacts__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+  .contacts__mail-tel {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.02em;
+    padding: 32px 31px;
+    color: #757575;
+    text-decoration: none;
+  }
+  .contacts__mail-tel:hover,
+  .contacts__mail-tel:focus {
+    color: #2196f3;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts {
+    display: flex;
+  }
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
+  .contacts__mail-tel {
+    font-weight: 500;
+    line-height: 1.17;
+    color: #757575;
+    padding: 32px 0px 31px 0px;
+    display: flex;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
